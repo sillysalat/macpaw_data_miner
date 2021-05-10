@@ -4,7 +4,7 @@ import re
 import requests
 import time
 
-import db_key
+import hidden
 
 
 class Parser:
@@ -39,7 +39,7 @@ class Parser:
 class Database:
     """PostgreSQL Database class."""
 
-    def __init__(self, secrets=db_key.secrets()):
+    def __init__(self, secrets=hidden.secrets()):
 
         self.secrets = secrets
         self.conn = None
